@@ -37,7 +37,7 @@ options("RStata.StataPath" = "\"C:\\Program Files\\Stata17\\StataMP-64\"")
 options("RStata.StataVersion" = 17)
 
 #Set number of original draws. We use 150 for the final run. Choose a lot fewer for test runs
-n_simulations<-2
+n_simulations<-100
 
 #First, open "$code_cd\model wrapper.do" and set globals:
   #a) data years for different datasets

@@ -77,7 +77,7 @@ global fed_holidays_y2 "inlist(day_y2,td(01jan2025), td(20jan2025), td(17feb2025
 global leap_yr_days "td(29feb2024)" 
 
 *Choose how many draws you want to create. Will create 150 for final version, from which 100 will be selected
-global ndraws 2
+global ndraws 100
 
 *Set the global length to pull either ionches or centimeters from MRIP (l_in_bin or l_cm_bin)
 global length_bin l_cm_bin
@@ -108,7 +108,7 @@ global inflation_expansion=1.27
 
 *Adjust project paths based on user
 global project_path "C:\Users\andrew.carr-harris\Desktop\Git\rdmtool\lou_files\cod_haddock" /* Lou's project path */
-global project_path "C:\Users\min-yang.lee\Documents\rdmtool\lou_files\cod_haddock"  /* Min-Yang's project path */
+*global project_path "C:\Users\min-yang.lee\Documents\rdmtool\lou_files\cod_haddock"  /* Min-Yang's project path */
 
 global input_data_cd "${project_path}\input_data"
 global input_code_cd "${project_path}\\code"
