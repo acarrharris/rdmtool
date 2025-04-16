@@ -226,10 +226,11 @@ di ((`new'-`not_truc')/`not_truc')*100
 /*The following attempts to correct for bias that occurs when drawing from uncertain MRIP estimates. 
 	*When an MRIP estimate is very uncertain, some draws of x from a normal distribution can result in x_i<0. Because trip outcomes cannot 
 	*be negative, I change these to 0. But doing so results in an upwardly shifted mean across draws. To correct for this, I sum x_i
-	*across draws where x_i<0, divide by the number of draws where x_i>0, and subtract this value from all draws where x_i>0. 
+	*across draws where x_i<0, and subtract this value from each draw where x_i>0 in proportion to the amount that each x_i>0 contributes to the total 
+	*number of trips across x_i's>0.
 	*This partly corrects for the issue; however, subtracting a fixed value from x_i where x_i>0 leads to some of these x_i's now <0. I replace these values as 0. */
 
-*I have tried paramaterizing non-negative distributions using the MRIP point estimate and SE, but couldn't quite figure it out. Can work on this in the future. 
+*I have tried paramaterizing non-negative distributions using the MRIP point estimate and SE, but these resulted in larger differences in the mean trip estimates across all draws by domain (month, kindo-of-day, and mode) than the approach used here. Can work on this in the future. 
  
 gen domain=month1+"_"+kod+"_"+mode
 
